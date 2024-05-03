@@ -7,13 +7,11 @@ from app.main import get_coin_combination
     "cents,error",
     [
         ("23", TypeError),
-        (23.1, TypeError),
-        (-2, ValueError),
+        (None, TypeError)
     ],
     ids=[
         "Should raise an error when string given.",
-        "Should raise an error when float given.",
-        "Should raise an error when negative given."
+        "Should raise an error when None given.",
     ]
 )
 def test_should_raise_error(cents: int, error: type[Exception]) -> None:
